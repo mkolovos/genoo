@@ -34,10 +34,10 @@ interface JokeFormProps {
 
 const JokeForm: React.FC<JokeFormProps> = props => {
   const classes = useStyles();
-  const [category, setCategory] = useState("");
-  const [query, setQuery] = useState("");
+  const [category, setCategory] = useState<string>("");
+  const [query, setQuery] = useState<string>("");
   const [categoryList, setCategoryList] = useState<Array<string>>([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState<boolean>(false);
   const handleCategoryChange = (
     event: React.ChangeEvent<{ value: unknown }>
   ) => {

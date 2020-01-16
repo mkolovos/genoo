@@ -22,8 +22,8 @@ const useStyles = makeStyles({
 const JokeContainer: React.FC = () => {
   const classes = useStyles();
   const [jokes, setJokes] = useState<Array<JokeInterface>>([]);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(false);
+  const [loading, setLoading] = useState<boolean>(false);
+  const [error, setError] = useState<boolean>(false);
   const randomizeJoke = useCallback(async () => {
     setLoading(true);
     try {
